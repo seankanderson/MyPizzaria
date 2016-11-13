@@ -1,0 +1,112 @@
+/**
+ * "Yet Another Multicolumn Layout" - YAML CSS Framework
+ *
+ * central stylesheet - layout example "flexible-columns"
+ *
+ * @copyright       Copyright 2005-2012, Dirk Jesse
+ * @license         CC-BY 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-CDL (http://www.yaml.de/license.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         4.0
+ * @lastmodified    $Date: 2012-01-22 12:01:24 +0100 (So, 22 Jan 2012) $
+ */
+
+/* Google Font API */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Droid+Sans:700);
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(yaml/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(yaml/navigation/hlist.css);
+@import url(yaml/forms/gray-theme.css);
+
+@import url(yaml/screen/typography.css);
+@import url(yaml/screen/screen-PAGE-layout.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(yaml/print/print.css);
+
+
+/*  Custom styling to mod the YAML */
+
+.ym-col1 { width: 75%; } /* content */
+.ym-col3 { margin-left: 75%; margin-right: 0; } /* sidebar */
+.ym-button {	
+	width: 70%;
+	height: 30%;
+	
+}
+
+
+
+body {
+	//background-image: url('http://haven-ethic.com/images/collage.jpg');
+	background: gray;
+}
+
+
+
+/* Form Stuff*/
+
+.content_form label,  .content_form input[type="text"], .content_form input[type="password"]{
+	border: solid 1px #E5E5E5;  
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+	//margin: 0 0 10px 5px;
+	padding: 8px;
+	font-size: 2em;
+		
+}
+
+.content_form label {
+	border: none;
+	background: none;
+}
+
+.content_form input[type="text"]:focus, .content_form input[type="password"]:focus{
+	/*border-color: blue;*/
+	box-shadow: rgba(68,68,68,0.3) 0px 0px 8px;  
+		
+}
+
+.big_link {
+
+	font-size: 1em;
+	display: block;
+	padding: 1em;
+	border: 1px solid white;
+	margin: 2px 0 2px 0;
+	width: 70%;
+	
+}
+
+a:hover.big_link {
+	 
+	color: black;
+	background: white; 
+	border: 1px solid black;
+	
+}
+
+.menu_item {
+
+	margin: 5px 0 0 0;
+	padding: 5px;
+	border: solid white 1px;
+	
+}
+
+.menu_item:hover {
+
+	border: solid black 1px;
+
+}
+
+.menu_item a {
+	
+	
+
+}
+

@@ -1,0 +1,76 @@
+CREATE TABLE IF NOT EXISTS  `ci_sessions` (
+	session_id varchar(40) DEFAULT '0' NOT NULL,
+	ip_address varchar(16) DEFAULT '0' NOT NULL,
+	user_agent varchar(120) NOT NULL,
+	last_activity int(10) unsigned DEFAULT 0 NOT NULL,
+	user_data text NOT NULL,
+	PRIMARY KEY (session_id),
+	KEY `last_activity_idx` (`last_activity`)
+);
+
+CREATE TABLE managers (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(40),
+role INT(11),
+password VARCHAR(32)
+);
+
+CREATE TABLE orders (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+phone VARCHAR(12),
+email_address VARCHAR(50),
+carrier VARCHAR(40),
+started INT(11),
+submitted INT(11),
+verified TINYINT(1),
+v_time INT(11),
+ready_done TINYINT(1),
+rd_time INT(11),
+notified TINYINT(1)	
+);
+
+CREATE TABLE order_items (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+order_id INT(11),
+name VARCHAR(40),
+price FLOAT,
+combo_top_prices TINYINT(1),
+top_price FLOAT
+);
+
+CREATE TABLE order_item_toppings (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+order_id INT(11),
+item_id INT(11),
+comment VARCHAR(40),
+half VARCHAR(1),
+price FLOAT
+);
+
+CREATE TABLE menu_items (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+item_name VARCHAR(25),
+description VARCHAR(300),
+price FLOAT,
+topping_price FLOAT,
+show_top_price TINYINT(1),
+combo_top_prices TINYINT(1),
+category VARCHAR(12),
+enabled TINYINT(1),
+toppings_table VARCHAR(25)
+);
+
+
+CREATE TABLE menu_pizza_toppings (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+topping_name VARCHAR(25),
+price FLOAT,
+category VARCHAR(12)
+);
+
+CREATE TABLE menu_sand_toppings (
+id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+topping_name VARCHAR(25),
+price FLOAT,
+category VARCHAR(12)
+);

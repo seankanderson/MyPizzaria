@@ -1,0 +1,13 @@
+Ion Auth
+
+You will need to change some of the controller code to support your user registration requirements.
+The field validation and additional_data will have to be populated. 
+Ion Auth is not a system that can drop into a project and just run, you will have to hack on it.
+
+All of the trigger_events() calls sprinkled throughout the project are not doing anything. 
+You have to set the events that match the trigger_events() calls with set_hook().
+trigger_events() doesn't take aruments. The only argument is specified in set_hook(). WTF?
+Result: not using trigger_events()!
+
+
+

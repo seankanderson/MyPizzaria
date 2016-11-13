@@ -1,0 +1,1 @@
+<h2 style="color: red;">Unauthorized Access Attempt</h2>			<br/><br/><p class="error"> You are not logged in as a manager.</p>
