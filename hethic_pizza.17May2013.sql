@@ -1,4 +1,4 @@
--- Data model for online restaurant order app. 
+-- Data model for online restaurant order app. Model was originally designed using MySqlWorkbench.
 -- Sean K. Anderson 2012
 -- MySQL dump 10.13  Distrib 5.5.23, for Linux (x86_64)
 --
