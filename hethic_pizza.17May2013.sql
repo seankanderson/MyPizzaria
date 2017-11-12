@@ -1,3 +1,5 @@
+-- Data model for online restaurant order app. 
+-- Sean K. Anderson 2012
 -- MySQL dump 10.13  Distrib 5.5.23, for Linux (x86_64)
 --
 -- Host: localhost    Database: hethic_pizza
